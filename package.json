@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "axos": "^0.0.1",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "fs": "0.0.1-security",
+    "gpti": "^2.1.7",
+    "path": "^0.12.7"
+  }
+}
