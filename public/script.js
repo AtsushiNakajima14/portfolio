@@ -57,9 +57,9 @@ function addMessage(text, sender) {
 
 async function botChat(userMessage) {
     try {
-        const response = await fetch(`/ai?prompt=${encodeURIComponent(userMessage)}&uid=${userId}`);
+        const response = await fetch(`https://joshweb.click/gpt4?prompt=${encodeURIComponent(userMessage)}&uid=${userId}`);
         const data = await response.json();
-        addMessage(data.response, 'bot');
+        addMessage(data.gpt4, 'bot');
     } catch (error) {
         console.error('Error:', error);
         addMessage('Sorry, I encountered an error. Please try again.', 'bot');
