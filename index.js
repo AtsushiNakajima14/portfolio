@@ -6,7 +6,6 @@ const fs = require("fs");
 const { gpt } = require("gpti");
 app.use(cors());
 const port = process.env.PORT || 3030;
-const axios = require("axios");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (_, res) => {
