@@ -51,7 +51,6 @@ app.get("/ai", async function (req, res) {
             return res.json({ response: "All histories have been cleared" });
         }
 
-        // Add the user's prompt to the conversation history
         data[uid].push({
             role: "user",
             content: prompt,
@@ -69,13 +68,11 @@ app.get("/ai", async function (req, res) {
                     console.log(err);
                     return res.status(500).json({ gpt4: "An error occurred while processing your request." });
                 } else {
-                    // Add the assistant's response to the conversation history
+                  
                     data[uid].push({
                         role: "assistant",
                         content: respond.gpt,
                     });
-
-                    // Save the updated conversation history
                     fs.writeFileSync(path, JSON.stringify(data, null, 4));
 
                     return res.json({ response: respond.gpt });

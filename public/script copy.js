@@ -65,13 +65,13 @@ async function botChat(userMessage) {
         addMessage('Sorry, I encountered an error. Please try again.', 'bot');
     }
 }
-const backgroundAnimation = document.getElementById('background-animation');
+const bgAnim = document.getElementById('background-animation');
 for (let i = 0; i < 50; i++) {
     const span = document.createElement('span');
     span.style.left = Math.random() * window.innerWidth + 'px';
     span.style.top = Math.random() * window.innerHeight + 'px';
     span.style.animationDelay = Math.random() * 5 + 's';
-    backgroundAnimation.appendChild(span);
+    bgAnim.appendChild(span);
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
